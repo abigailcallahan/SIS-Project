@@ -11,7 +11,9 @@ public class Classes
 			System.out.println("\nDo you want to change them?\nyes or no");
 			if(stringGetter.nextLine().equalsIgnoreCase("yes")) {
 				System.out.println("What do you want to be their new first period class?");
-				if(stringGetter.nextLine())
+				if(stringGetter.nextLine().equalsIgnoreCase("Algebra")) {
+					RunSIS.StudentList.get(studentIndex).setFirstPeriod("Algebra");
+				}
 			}
 		}
 	}
