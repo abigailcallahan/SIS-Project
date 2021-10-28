@@ -1,17 +1,24 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class RunSIS
 	{
-	static String[] studentList = new String[24];
-	static Scanner myFile = new Scanner(new File("StudentList.txt"));
+	static ArrayList<Student>TVShows = new ArrayList<Student>();
 	static String student;
+	
 		public static void main(String[] args) throws IOException
 			{
+			fillArrayList();
+			}
+		public static void fillArrayList() throws IOException
+		{
+			Scanner myFile = new Scanner(new File("StudentList.txt"));
 			while (myFile.hasNext()) {	
 				student = myFile.nextLine();
-			}
+		}
 			
 			Scanner userInt = new Scanner(System.in);
 			System.out.println("What would you like to do?");
