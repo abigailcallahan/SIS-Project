@@ -6,7 +6,7 @@ import java.io.IOException;
 public class RunSIS
 	{
 	//arraylist and variables
-	static ArrayList<Student>TVShows = new ArrayList<Student>();
+	static ArrayList<Student>StudentList = new ArrayList<Student>();
 	static String student;
 	
 		public static void main(String[] args) throws IOException
@@ -26,6 +26,17 @@ public class RunSIS
 			System.out.println("1) add or delete a student");
 			System.out.println("2) change student grades/schedule");
 			System.out.println("3) sort students");
+			int userChoice = userInt.nextInt();
+			if(userChoice == 1) {
+				
+			}
+			if(userChoice == 2) {
+				
+			}
+			if(userChoice == 3) {
+				
+			}
+			
 			
 			
 			
