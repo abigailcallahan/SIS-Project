@@ -2,8 +2,7 @@ import java.util.Scanner;
 
 public class AddDeleteStudent
 	{
-		static 
-		static int addOrDelete;
+		//static int addOrDelete;
 		public static void main(String[] args)
 			{
 				System.out.println("Would you like to: ");
