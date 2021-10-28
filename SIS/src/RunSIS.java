@@ -11,6 +11,7 @@ public class RunSIS
 	
 		public static void main(String[] args) throws IOException
 			{
+
 			fillArrayList();
 			}
 		public static void fillArrayList() throws IOException
@@ -26,8 +27,7 @@ public class RunSIS
 			System.out.println("2) change student grades/schedule");
 			System.out.println("3) sort students");
 			
-			
-
 			}
-
+		
+		
 	}

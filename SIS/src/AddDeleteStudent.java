@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class AddDeleteStudent
 	{
+
 		static Scanner input = new Scanner(System.in);
 		static int answer;
 		static String first;
@@ -19,6 +20,7 @@ public class AddDeleteStudent
 				System.out.println("Would you like to: ");
 				System.out.println("1) Add a Student");
 				System.out.println("2) Delete a Student");
+
 				System.out.println("3) Go back to Main Menu");
 				answer = input.nextInt();
 				if(answer == 1)
