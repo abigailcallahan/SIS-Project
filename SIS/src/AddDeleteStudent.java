@@ -53,6 +53,8 @@ public class AddDeleteStudent
 								firstG = intInput.nextInt();
 								//set grade
 								
+								
+								
 								System.out.println("What about second period?");
 								System.out.println("\t1) English\n\t2) Algebra");
 								secondP = intInput.nextInt();
