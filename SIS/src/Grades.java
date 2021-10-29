@@ -8,6 +8,7 @@ public class Grades
 		private static String flLName;
 		private static int sIndex;
 		private static Scanner stringGetter = new Scanner(System.in);
+		private static Scanner intGetter = new Scanner(System.in);
 		private static String className;
 		private static String newGrade;
 
@@ -29,6 +30,10 @@ public class Grades
 				return 0;
 			}
 		public static void changeClasses() {
+			sIndex = studentIndexGetter();
+			System.out.println("Do you want so switch (2) two classes or (3) change all three?");
+		}
+		private static void changeTwoClasses(int sI) {
 			
 		}
 		public static void changeGrade()
