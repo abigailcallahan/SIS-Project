@@ -15,9 +15,11 @@ public class AddDeleteStudent
 		static int firstP;
 		static int secondP;
 		static int thirdP;
-		static String firstG;
+		static int firstG;
 		static String secondG;
 		static String thirdG;
+		static String deleteFirst;
+		static String deleteSecond;
 
 		
 		public static void main(String[] args) throws IOException
@@ -45,6 +47,12 @@ public class AddDeleteStudent
 						if(firstP == 1)
 							{
 								//fill array
+								System.out.println("What grade will they have in Biology?");
+								System.out.println("\t1) A+\n\t2) A\n\t3) A-\n\t4) B+ \n\t5) B\n\t6) B-\n\t7) C+\n\t8) C\n\t9) C-\n\t"
+										+ "10) D+\n\t11) D\n\t12) D-\n\t13) F");
+								firstG = intInput.nextInt();
+								//set grade
+								
 								System.out.println("What about second period?");
 								System.out.println("\t1) English\n\t2) Algebra");
 								secondP = intInput.nextInt();
@@ -111,11 +119,28 @@ public class AddDeleteStudent
 				else if(answer == 2)
 					{
 						//display roster
-						//for(int i = 0; i < RunSIS.TVShows.size(); i++)
+						for(int i = 0; i < RunSIS.StudentList.size(); i++)
 							{
-								System.out.println("Test");
-								//System.out.println(i + 1 + ") ");
-								//System.out.print(RunSIS.TVShows.get(i));
+								System.out.println(i + 1 + ") ");
+								System.out.print(RunSIS.StudentList.get(i));
+							}
+						
+						System.out.println("What is the first name of the student that you would you like to delete?");
+						deleteFirst = stringInput.nextLine();
+						System.out.println("What is the second name of the student you would like to delete?");
+						deleteSecond = stringInput.nextLine();
+						
+						for(int i = 0; i < RunSIS.StudentList.size(); i++)
+							{
+								if(deleteFirst.equals(RunSIS.StudentList.get(i).getFirstName()) && deleteSecond.equals(RunSIS.StudentList.get(i).getLastName()))
+									{
+										RunSIS.StudentList.remove(i);
+									}
+								else
+									{
+										System.out.println("You did not enter a real students name, or you did not use correct "
+												+ "capitalization, you will have to start over");
+									}
 							}
 					}
 
