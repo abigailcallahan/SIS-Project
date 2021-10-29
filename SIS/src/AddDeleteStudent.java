@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class AddDeleteStudent
 	{
+
 		static Scanner input = new Scanner(System.in);
 		static int answer;
 		static String first;
@@ -19,6 +20,7 @@ public class AddDeleteStudent
 				System.out.println("Would you like to: ");
 				System.out.println("1) Add a Student");
 				System.out.println("2) Delete a Student");
+
 				System.out.println("3) Go back to Main Menu");
 				answer = input.nextInt();
 				if(answer == 1)
@@ -32,73 +34,73 @@ public class AddDeleteStudent
 						System.out.println("Ok, so far we have " + first + " " + last);
 						
 						
-//						System.out.println("First Period Class? Your options are: ");
-//						System.out.println("\t1) Biology\n\t2) English\n\t3) Algebra");
-//						firstP = input.nextInt();
-//						
-//						if(firstP == 1)
-//							{
-//								//fill array
-//								System.out.println("What about second period?");
-//								System.out.println("\t1) English\n\t2) Algebra");
-//								secondP = input.nextInt();
-//								if(secondP == 1)
-//									{
-//										//fill array
-//										//fill array with automatic third period
-//										//display all classes
-//									}
-//								else if(secondP == 2)
-//									{
-//										//fill array
-//										//fill array with automatic third period
-//										//display all classes
-//									}
-//							}
-//						
-//						else if(firstP == 2)
-//							{
-//								//fill array
-//								System.out.println("What about second period?");
-//								System.out.println("\t1) Biology\n\t2) Algebra");
-//								secondP = input.nextInt();
-//								if(secondP == 1)
-//									{
-//										//fill array
-//										//fill array with automatic third period
-//										//display all classes
-//									}
-//								else if(secondP == 2)
-//									{
-//										//fill array
-//										//fill array with automatic third period
-//										//display all classes
-//									}
-//							}
-//						
-//						else if(firstP == 3)
-//							{
-//								//fill array
-//								System.out.println("What about second period?");
-//								System.out.println("\t1) Biology\n\t2) English");
-//								secondP = input.nextInt();
-//								if(secondP == 1)
-//									{
-//										//fill array
-//										//fill array with automatic third period
-//										//display all classes
-//									}
-//								else if(secondP == 2)
-//									{
-//										//fill array
-//										//fill array with automatic third period
-//										//display all classes
-//									}
-//							}
-//						else
-//							{
-//								System.out.println("You did not enter a valid answer, you will restart.");
-//							}
+						System.out.println("First Period Class? Your options are: ");
+						System.out.println("\t1) Biology\n\t2) English\n\t3) Algebra");
+						firstP = input.nextInt();
+						
+						if(firstP == 1)
+							{
+								//fill array
+								System.out.println("What about second period?");
+								System.out.println("\t1) English\n\t2) Algebra");
+								secondP = input.nextInt();
+								if(secondP == 1)
+									{
+										//fill array
+										//fill array with automatic third period
+										//display all classes
+									}
+								else if(secondP == 2)
+									{
+										//fill array
+										//fill array with automatic third period
+										//display all classes
+									}
+							}
+						
+						else if(firstP == 2)
+							{
+								//fill array
+								System.out.println("What about second period?");
+								System.out.println("\t1) Biology\n\t2) Algebra");
+								secondP = input.nextInt();
+								if(secondP == 1)
+									{
+										//fill array
+										//fill array with automatic third period
+										//display all classes
+									}
+								else if(secondP == 2)
+									{
+										//fill array
+										//fill array with automatic third period
+										//display all classes
+									}
+							}
+						
+						else if(firstP == 3)
+							{
+								//fill array
+								System.out.println("What about second period?");
+								System.out.println("\t1) Biology\n\t2) English");
+								secondP = input.nextInt();
+								if(secondP == 1)
+									{
+										//fill array
+										//fill array with automatic third period
+										//display all classes
+									}
+								else if(secondP == 2)
+									{
+										//fill array
+										//fill array with automatic third period
+										//display all classes
+									}
+							}
+						else
+							{
+								System.out.println("You did not enter a valid answer, you will restart.");
+							}
 					}
 				
 
