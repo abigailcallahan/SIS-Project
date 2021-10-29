@@ -1,9 +1,14 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.io.File;
+import java.io.IOException;
+
 
 public class AddDeleteStudent
 	{
 
-		static Scanner input = new Scanner(System.in);
+		static Scanner intInput = new Scanner(System.in);
+		static Scanner stringInput = new Scanner(System.in);
 		static int answer;
 		static String first;
 		static String last;
@@ -15,37 +20,37 @@ public class AddDeleteStudent
 		static String thirdG;
 
 		
-		public static void main(String[] args)
+		public static void main(String[] args) throws IOException
 			{
 				System.out.println("Would you like to: ");
 				System.out.println("1) Add a Student");
 				System.out.println("2) Delete a Student");
-
 				System.out.println("3) Go back to Main Menu");
-				answer = input.nextInt();
+				answer = intInput.nextInt();
 				if(answer == 1)
 					{
 						System.out.println("What is the first name of your new student");
-						first = input.nextLine();
+						first = stringInput.nextLine();
 						//put name into array list
 						System.out.println("Last Name?");
-						last = input.nextLine();
+						last = stringInput.nextLine();
 						//last name into arraylist
 						System.out.println("Ok, so far we have " + first + " " + last);
 						
 						
 						System.out.println("First Period Class? Your options are: ");
 						System.out.println("\t1) Biology\n\t2) English\n\t3) Algebra");
-						firstP = input.nextInt();
+						firstP = intInput.nextInt();
 						
 						if(firstP == 1)
 							{
 								//fill array
 								System.out.println("What about second period?");
 								System.out.println("\t1) English\n\t2) Algebra");
-								secondP = input.nextInt();
+								secondP = intInput.nextInt();
 								if(secondP == 1)
 									{
+										//use setter 
 										//fill array
 										//fill array with automatic third period
 										//display all classes
@@ -63,7 +68,7 @@ public class AddDeleteStudent
 								//fill array
 								System.out.println("What about second period?");
 								System.out.println("\t1) Biology\n\t2) Algebra");
-								secondP = input.nextInt();
+								secondP = intInput.nextInt();
 								if(secondP == 1)
 									{
 										//fill array
@@ -83,7 +88,7 @@ public class AddDeleteStudent
 								//fill array
 								System.out.println("What about second period?");
 								System.out.println("\t1) Biology\n\t2) English");
-								secondP = input.nextInt();
+								secondP = intInput.nextInt();
 								if(secondP == 1)
 									{
 										//fill array
@@ -103,6 +108,15 @@ public class AddDeleteStudent
 							}
 					}
 				
+				else if(answer == 2)
+					{
+						//display roster
+						for(int i = 0; i < RunSIS.TVShows.size(); i++)
+							{
+								System.out.println(i + 1 + ") ");
+								System.out.print(RunSIS.TVShows.get(i));
+							}
+					}
 
 				//ask if they want to 
 				//1)add or 2) delete 3) go 
