@@ -111,16 +111,14 @@ public class AddDeleteStudent
 				else if(answer == 2)
 					{
 						//display roster
-						for(int i = 0; i < RunSIS.TVShows.size(); i++)
+						//for(int i = 0; i < RunSIS.TVShows.size(); i++)
 							{
-								System.out.println(i + 1 + ") ");
-								System.out.print(RunSIS.TVShows.get(i));
+								System.out.println("Test");
+								//System.out.println(i + 1 + ") ");
+								//System.out.print(RunSIS.TVShows.get(i));
 							}
 					}
 
-				//ask if they want to 
-				//1)add or 2) delete 3) go 
-				
 				//IF THEY PICK ADD
 					//get new name
 					//get new GPA
