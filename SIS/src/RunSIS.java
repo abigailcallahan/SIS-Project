@@ -19,6 +19,7 @@ public class RunSIS
 			Scanner myFile = new Scanner(new File("StudentList.txt"));
 			while (myFile.hasNext()) {	
 				student = myFile.nextLine();
+				String[] fill = student.split(" ");
 		}
 			//printing out main menu
 			Scanner userInt = new Scanner(System.in);
