@@ -31,14 +31,14 @@ public class AddDeleteStudent
 					{
 						System.out.println("What is the first name of your new student");
 						first = stringInput.nextLine();
-						//put name into array list
+						//set name into array list
 						System.out.println("Last Name?");
 						last = stringInput.nextLine();
 						//last name into arraylist
-						System.out.println("Ok, so far we have " + first + " " + last);
+						System.out.println("");
 						
 						
-						System.out.println("First Period Class? Your options are: ");
+						System.out.println("What is " + first + " " + last + "'s first period class? Your options are: ");
 						System.out.println("\t1) Biology\n\t2) English\n\t3) Algebra");
 						firstP = intInput.nextInt();
 						
@@ -50,6 +50,7 @@ public class AddDeleteStudent
 								secondP = intInput.nextInt();
 								if(secondP == 1)
 									{
+										//set 1 to class
 										//use setter 
 										//fill array
 										//fill array with automatic third period
@@ -57,12 +58,14 @@ public class AddDeleteStudent
 									}
 								else if(secondP == 2)
 									{
+										//set 2 to class
 										//fill array
 										//fill array with automatic third period
 										//display all classes
 									}
+								
 							}
-						
+	
 						else if(firstP == 2)
 							{
 								//fill array
