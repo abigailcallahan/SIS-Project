@@ -32,6 +32,7 @@ public class AddDeleteStudent
 						System.out.println("What is the first name of your new student");
 						first = stringInput.nextLine();
 						//set name into array list
+						RunSIS.Student.setFirstName(first);
 						System.out.println("Last Name?");
 						last = stringInput.nextLine();
 						//last name into arraylist
