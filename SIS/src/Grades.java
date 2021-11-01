@@ -12,7 +12,9 @@ public class Grades
 		private static String className;
 		private static String newGrade;
 		private static int classSizeChoice;
-
+		private static int classOneChoice;
+		private static int classTwoChoice;
+		private static String tempClassStorage;
 		public static int studentIndexGetter()
 			{
 				System.out.println("What is the first name of the student who you want to select?");
@@ -43,7 +45,7 @@ public class Grades
 					{
 						System.out.println("What do you want the first period class to be?");
 						classSelections();
-
+						
 					}
 			}
 
@@ -67,17 +69,46 @@ public class Grades
 								threeNotUsed = false;
 								System.out.print("Biology");
 							}
-						if(i==1||i==2) {
-							
+						if(i==0||i==1) {
+							System.out.println(" or ");
 						}
 					}
 			}
 
 		private static void changeTwoClasses(int sI)
-			{
-
+			{	
+				System.out.println(RunSIS.StudentList.get(sI).getFirstName()+"'s first period class is "+RunSIS.StudentList.get(sI).getFirstPeriod());
+				System.out.println(RunSIS.StudentList.get(sI).getFirstName()+"'s second period class is "+RunSIS.StudentList.get(sI).getSecondPeriod());
+				System.out.println(RunSIS.StudentList.get(sI).getFirstName()+"'s third period class is "+RunSIS.StudentList.get(sI).getThirdPeriod());
+				
+				System.out.println("What period is the first class that you want to switch?");
+				classOneChoice = intGetter.nextInt();
+				System.out.println("Which is the second class that you want to switch?");
+				classTwoChoice = intGetter.nextInt();
+				tempClassStorage = classGetter(classOneChoice, sI);
+				classSetter(classOneChoice, classGetter(classTwoChoice, sI), sI);
+				classSetter(classTwoChoice, tempClassStorage, sI);
+				
 			}
-
+		private static String classGetter(int period, int studentIndex) {
+			if( period ==1) {
+				return RunSIS.StudentList.get(studentIndex).getFirstPeriod();
+			}else if (period ==2) {
+				return RunSIS.StudentList.get(studentIndex).getSecondPeriod();
+			}else {
+				return RunSIS.StudentList.get(studentIndex).getThirdPeriod();
+			}
+			
+		}
+		private static void classSetter(int p, String cS, int studentIndex) {
+			if( p ==1) {
+				 RunSIS.StudentList.get(studentIndex).setFirstPeriod(cS);
+			}else if (p ==2) {
+				RunSIS.StudentList.get(studentIndex).setSecondPeriod(cS);
+			}else {
+				 RunSIS.StudentList.get(studentIndex).setThirdPeriod(cS);
+			}
+		}
 		public static void changeGrade()
 			{
 				sIndex = studentIndexGetter();
