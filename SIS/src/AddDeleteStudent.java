@@ -6,7 +6,6 @@ import java.io.IOException;
 
 public class AddDeleteStudent
 	{
-
 		static Scanner intInput = new Scanner(System.in);
 		static Scanner stringInput = new Scanner(System.in);
 		static int answer;
@@ -29,14 +28,17 @@ public class AddDeleteStudent
 				answer = intInput.nextInt();
 				if(answer == 1)
 					{
+						//USE METHOD 1 HERE
 						System.out.println("What is the first name of your new student");
 						first = stringInput.nextLine();
 						//set name into array list
-						RunSIS.Student.setFirstName(first);
+//						RunSIS.new Student(setFirstName(first), 0, 0, 0, 0, 0, 0, 0);
+						//RunSIS.Student.setFirstName(first);
 						System.out.println("Last Name?");
 						last = stringInput.nextLine();
 						//last name into arraylist
-						System.out.println("");
+//						new Student = (first, setLastName(last), 0, 0, 0, 0, 0, 0);
+						System.out.println();
 						
 						
 						System.out.println("What is " + first + " " + last + "'s first period class? Your options are: ");
@@ -46,7 +48,13 @@ public class AddDeleteStudent
 						if(firstP == 1)
 							{
 								//fill array
-								System.out.println("What about second period?");
+								
+								System.out.println("What is their grade in Biology?");
+								System.out.println("\tuse a capitalized letter with a + or - or nothing");
+								firstG = stringInput.nextLine();
+								//fill array
+								
+								System.out.println("What about second period class?");
 								System.out.println("\t1) English\n\t2) Algebra");
 								secondP = intInput.nextInt();
 								if(secondP == 1)
@@ -54,14 +62,28 @@ public class AddDeleteStudent
 										//set 1 to class
 										//use setter 
 										//fill array
+										System.out.println("What is their grade in English?");
+										System.out.println("\tuse a capitalized letter with a + or - or nothing");
+										secondG = stringInput.nextLine();
+										//fill array with grade
 										//fill array with automatic third period
+										System.out.println("What is their grade in Algebra?");
+										System.out.println("\tuse a capitalized letter with a + or - or nothing");
+										thirdG = stringInput.nextLine();
 										//display all classes
 									}
 								else if(secondP == 2)
 									{
 										//set 2 to class
 										//fill array
+										System.out.println("What is their grade in Algebra?");
+										System.out.println("\tuse a capitalized letter with a + or - or nothing");
+										secondG = stringInput.nextLine();
+										//fill array with grade
 										//fill array with automatic third period
+										System.out.println("What is their grade in English?");
+										System.out.println("\tuse a capitalized letter with a + or - or nothing");
+										thirdG = stringInput.nextLine();
 										//display all classes
 									}
 								
@@ -96,6 +118,7 @@ public class AddDeleteStudent
 								if(secondP == 1)
 									{
 										//fill array
+										
 										//fill array with automatic third period
 										//display all classes
 									}
@@ -110,10 +133,14 @@ public class AddDeleteStudent
 							{
 								System.out.println("You did not enter a valid answer, you will restart.");
 							}
+						
 					}
+				
+				//END METHOD 1 HERE
 				
 				else if(answer == 2)
 					{
+						//START METHOD 2 HERE
 						//display roster
 						//for(int i = 0; i < RunSIS.TVShows.size(); i++)
 							{
@@ -121,6 +148,12 @@ public class AddDeleteStudent
 								//System.out.println(i + 1 + ") ");
 								//System.out.print(RunSIS.TVShows.get(i));
 							}
+							//END METHOD 2 HERE
+					}
+				
+				else if(answer == 3)
+					{
+						//go to menu
 					}
 
 				//IF THEY PICK ADD
