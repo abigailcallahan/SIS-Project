@@ -9,7 +9,10 @@ public class Student
 		private String firstGrade;
 		private String secondGrade;
 		private String thirdGrade;
+		private double GPA;
 		
+		
+
 		public Student(String f, String l, String fp, String sp, String tp, String fg, String sg, String tg)
 		{
 			firstName = f;
@@ -100,6 +103,15 @@ public class Student
 		public void setThirdGrade(String thirdGrade)
 			{
 				this.thirdGrade = thirdGrade;
+			}
+		public double getGPA()
+			{
+				return GPA;
+			}
+
+		public void setGPA(double gPA)
+			{
+				GPA = gPA;
 			}
 
 		

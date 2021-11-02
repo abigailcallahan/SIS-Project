@@ -7,15 +7,13 @@ import java.util.Collections;
 public class RunSIS
 	{
 	//arraylist and variables
-	static ArrayList<Student>StudentList = new ArrayList<Student>();
+//	static ArrayList<Student>StudentList = new ArrayList<Student>();
 	static String student;
-	static int classSortChoice;
-		
-	public static void main(String[] args) throws IOException
+
+	static ArrayList<Student> StudentList = new ArrayList<Student>();
+	
+		public static void main(String[] args) throws IOException
 			{
-
-				System.out.println("Hello World");
-
 
 			fillArrayList();
 			}
@@ -24,8 +22,9 @@ public class RunSIS
 			//filling arraylist
 			Scanner myFile = new Scanner(new File("StudentList.txt"));
 			while (myFile.hasNext()) {	
-				student = myFile.nextLine();
-				String[] fill = student.split(" ");
+				String tempArray = myFile.nextLine();
+				String[] filler = tempArray.split(" ");
+				StudentList.add(new Student(filler[0],filler[1],filler[2],filler[3],filler[4],filler[5],filler[6],filler[7]));
 		}
 			//printing out main menu
 			Scanner userInt = new Scanner(System.in);
