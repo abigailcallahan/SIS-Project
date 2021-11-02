@@ -17,41 +17,37 @@ public class AddDeleteStudent
 		static String firstG;
 		static String secondG;
 		static String thirdG;
+		static String deleteLast;
 		
 		public static void main(String[] args) throws IOException
 			{
-				for(int i = 0; i < RunSIS.StudentList.size(); i++)
-				{
-					System.out.println(i); 
-				}
-//				System.out.println("Would you like to: ");
-//				System.out.println("1) Add a Student");
-//				System.out.println("2) Delete a Student");
-//				System.out.println("3) Go back to Main Menu");
-//				answer = intInput.nextInt();
-//				
-//				if(answer == 1)
-//					{
-//						addStudent();
-//					}
-//				else if(answer == 2)
-//					{
-//						deleteStudent();
-//						
-//					}
-//				
-//				else if(answer == 3)
-//					{
-//						//go to menu
-//					}
+				System.out.println("Would you like to: ");
+				System.out.println("1) Add a Student");
+				System.out.println("2) Delete a Student");
+				System.out.println("3) Go back to Main Menu");
+				answer = intInput.nextInt();
+				
+				if(answer == 1)
+					{
+						addStudent();
+					}
+				else if(answer == 2)
+					{
+						deleteStudent();
+						
+					}
+				
+				else if(answer == 3)
+					{
+						//go to menu
+					}
 			}
 		
-		public static void addStudent()
+		public static void addStudent() throws IOException
 		{
 			System.out.println("What is the first name of your new student");
 			first = stringInput.nextLine();
 			//set name into array list
-//			RunSIS.new Student(setFirstName(first), 0, 0, 0, 0, 0, 0, 0);
 			//RunSIS.Student.setFirstName(first);
 			System.out.println("Last Name?");
 			last = stringInput.nextLine();
@@ -154,18 +150,63 @@ public class AddDeleteStudent
 				}
 			
 		}
-		public static void deleteStudent()
+		
+		public static void deleteStudent() throws IOException
 		{
-			//display roster
-			//for(int i = 0; i < RunSIS.TVShows.size(); i++)
+			RunSIS.fillArrayList();
+			for(int i = 0; i < RunSIS.StudentList.size(); i++)
 				{
-					System.out.println("Test");
-					//System.out.println(i + 1 + ") ");
-					//System.out.print(RunSIS.TVShows.get(i));
+					System.out.println();
+					System.out.print(i + 1 + ") ");
+					System.out.print(RunSIS.StudentList.get(i).getFirstName() + " " + RunSIS.StudentList.get(i).getLastName() + " " + 
+					RunSIS.StudentList.get(i).getFirstPeriod() + " " + RunSIS.StudentList.get(i).getFirstGrade() + " " + 
+					RunSIS.StudentList.get(i).getSecondPeriod() + " " + RunSIS.StudentList.get(i).getSecondGrade() + " " + 
+					RunSIS.StudentList.get(i).getThirdPeriod() + " " + RunSIS.StudentList.get(i).getThirdGrade());
 				}
+			
+			System.out.println("\n\n");
+			System.out.println("What is the last name of the student you would like to delete?");
+			deleteLast = stringInput.nextLine();
+			
+			for(int i = 0; i < RunSIS.StudentList.size(); i++)
+				{
+					if(deleteLast.equals(RunSIS.StudentList.get(i).getLastName()))
+						{
+							RunSIS.StudentList.remove(i);
+						}
+				}
+			
+			//display new roster
+			for(int i = 0; i < RunSIS.StudentList.size(); i++)
+				{
+					System.out.println();
+					System.out.print(i + 1 + ") ");
+					System.out.print(RunSIS.StudentList.get(i).getFirstName() + " " + RunSIS.StudentList.get(i).getLastName() + " " + 
+					RunSIS.StudentList.get(i).getFirstPeriod() + " " + RunSIS.StudentList.get(i).getFirstGrade() + " " + 
+					RunSIS.StudentList.get(i).getSecondPeriod() + " " + RunSIS.StudentList.get(i).getSecondGrade() + " " + 
+					RunSIS.StudentList.get(i).getThirdPeriod() + " " + RunSIS.StudentList.get(i).getThirdGrade());
+				}
+			System.out.println("\n");
+			System.out.println("This is your new roster ^^");
 		}
 	
 	
 	
 	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
