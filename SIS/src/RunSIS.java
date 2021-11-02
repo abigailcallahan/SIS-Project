@@ -7,7 +7,7 @@ import java.util.Collections;
 public class RunSIS
 	{
 	//arraylist and variables
-//	static ArrayList<Student>StudentList = new ArrayList<Student>();
+	//static ArrayList<Student>StudentList = new ArrayList<Student>();
 	static String student;
 
 	static ArrayList<Student> StudentList = new ArrayList<Student>();
@@ -68,24 +68,28 @@ public class RunSIS
 
 			
 			// Scanner for sorting
-			//Scanner userInput = new Scanner(System.in);
-			// variable for scanner
-			//int menuChoice = userInput.nextInt();
+			Scanner userInput = new Scanner(System.in);
+			//variable for scanner
+			int menuChoice = userInput.nextInt();
 			
 			//if statement to cycle through sorting menu
-			//if(menuChoice == 1)
-				//{
-				//Collections.sort(Database.roster, new LastNameSorter());
-				//}
-			//else if(menuChoice == 2)
-				//{
-				//Collections.sort(Database.roster, new GPASorter());
-				//}
-			//else if(menuChoice == 3) 
-			//else
-			//{
-			 //displayAddDeleteMenu()
+			if(menuChoice == 1)
+				{
+				Collections.sort(StudentList, new LastNameSorter());
+				}
+			else if(menuChoice == 2)
+				{
+				Collections.sort(StudentList, new GPASorter());
+				}
+			else if(menuChoice == 3)
+				{
+					
+				}
+			else
+			{
+			 AddDeleteStudent.addStudent();
 			}
+		}
 		public static void displayPeriodSorter()
 		{
 			// printing out period menu
