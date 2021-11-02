@@ -14,7 +14,7 @@ public class Student
 		
 		
 
-		public Student(String f, String l, String fp, String sp, String tp, String fg, String sg, String tg)
+		public Student(String f, String l, String fp, String fg, String sp, String sg, String tp, String tg)
 		{
 			firstName = f;
 			lastName = l;
