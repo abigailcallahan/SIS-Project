@@ -34,7 +34,7 @@ public class RunSIS
 				
 			}
 			if(userChoice == 2) {
-				
+				Grades.gradesMenu();
 			}
 			if(userChoice == 3) {
 				

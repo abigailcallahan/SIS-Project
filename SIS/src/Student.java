@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Student
 	{
@@ -104,15 +105,15 @@ public class Student
 			{
 				this.thirdGrade = thirdGrade;
 			}
-		public double getGPA()
+		public static  getGPA()
 			{
+			String  grade = "";
+			String[] letters
 				return GPA;
+				
 			}
 
-		public void setGPA(double gPA)
-			{
-				GPA = gPA;
-			}
+		
 
 		
 		
