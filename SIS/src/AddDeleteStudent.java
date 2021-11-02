@@ -23,6 +23,7 @@ public class AddDeleteStudent
 		
 		public static void main(String[] args) throws IOException
 			{
+				RunSIS.fillArrayList();
 				System.out.println("Would you like to: ");
 				System.out.println("1) Add a Student");
 				System.out.println("2) Delete a Student");
@@ -50,8 +51,6 @@ public class AddDeleteStudent
 			System.out.println("What is the first name of your new student");
 			first = stringInput.nextLine();
 
-			//set name into array list
-			//RunSIS.Student.setFirstName(first);
 
 			System.out.println("Last Name?");
 			last = stringInput.nextLine();
@@ -69,7 +68,6 @@ public class AddDeleteStudent
 					System.out.println("What is their grade in Biology?");
 					System.out.println("\tuse a capitalized letter with a + or - or nothing");
 					firstG = stringInput.nextLine();
-					//fill array
 					
 					System.out.println("What about second period class?");
 					System.out.println("\t1) English\n\t2) Algebra");
@@ -82,7 +80,7 @@ public class AddDeleteStudent
 							System.out.println("\tuse a capitalized letter with a + or - or nothing");
 							secondG = stringInput.nextLine();
 							
-							string2P = "Algebra";
+							string3P = "Algebra";
 							
 							System.out.println("What is their grade in Algebra?");
 							System.out.println("\tuse a capitalized letter with a + or - or nothing");
@@ -104,57 +102,97 @@ public class AddDeleteStudent
 							thirdG = stringInput.nextLine();
 							//display all classes
 						}
-					//RunSIS.StudentList(new Student(first, last, string1P, firstG, string2P, secondG, string3P, thirdG));
+					
 					
 				}
 
 			else if(firstP == 2)
 				{
-					string2P = "English";
+					string1P = "English";
+					System.out.println("What is their grade in English?");
+					System.out.println("\tuse a capitalized letter with a + or - or nothing");
+					firstG = stringInput.nextLine();
 					
 					System.out.println("What about second period?");
 					System.out.println("\t1) Biology\n\t2) Algebra");
 					secondP = intInput.nextInt();
 					if(secondP == 1)
 						{
-							//fill array
-							//fill array with automatic third period
-							//display all classes
+							string2P = "Biology";
+							System.out.println("What is their grade in Biology?");
+							System.out.println("\tuse a capitalized letter with a + or - or nothing");
+							secondG = stringInput.nextLine();
+							
+							string3P = "Algebra";
+							System.out.println("What is their grade in Algebra?");
+							System.out.println("\tuse a capitalized letter with a + or - or nothing");
+							thirdG = stringInput.nextLine();
 						}
 					else if(secondP == 2)
 						{
-							//fill array
-							//fill array with automatic third period
-							//display all classes
+						string2P = "Algebra";
+						System.out.println("What is their grade in Algebra?");
+						System.out.println("\tuse a capitalized letter with a + or - or nothing");
+						secondG = stringInput.nextLine();
+						
+						string3P = "Biology";
+						System.out.println("What is their grade in Biology?");
+						System.out.println("\tuse a capitalized letter with a + or - or nothing");
+						thirdG = stringInput.nextLine();
 						}
 				}
 			
 			else if(firstP == 3)
 				{
-					string3P = "Algebra";
+				string1P = "Algebra";
+				System.out.println("What is their grade in Algebra?");
+				System.out.println("\tuse a capitalized letter with a + or - or nothing");
+				firstG = stringInput.nextLine();
+				
+				System.out.println("What about second period?");
+				System.out.println("\t1) Biology\n\t2) English");
+				secondP = intInput.nextInt();
+				if(secondP == 1)
+					{
+						string2P = "Biology";
+						System.out.println("What is their grade in Biology?");
+						System.out.println("\tuse a capitalized letter with a + or - or nothing");
+						secondG = stringInput.nextLine();
+						
+						string3P = "English";
+						System.out.println("What is their grade in English?");
+						System.out.println("\tuse a capitalized letter with a + or - or nothing");
+						thirdG = stringInput.nextLine();
+					}
+				else if(secondP == 2)
+					{
+					string2P = "English";
+					System.out.println("What is their grade in English?");
+					System.out.println("\tuse a capitalized letter with a + or - or nothing");
+					secondG = stringInput.nextLine();
 					
-					System.out.println("What about second period?");
-					System.out.println("\t1) Biology\n\t2) English");
-					secondP = intInput.nextInt();
-					if(secondP == 1)
-						{
-							//fill array
-							
-							//fill array with automatic third period
-							//display all classes
-						}
-					else if(secondP == 2)
-						{
-							//fill array
-							//fill array with automatic third period
-							//display all classes
-						}
+					string3P = "Biology";
+					System.out.println("What is their grade in Biology?");
+					System.out.println("\tuse a capitalized letter with a + or - or nothing");
+					thirdG = stringInput.nextLine();
+					}
 				}
 			else
 				{
 					System.out.println("You did not enter a valid answer, you will restart.");
 				}
+			RunSIS.StudentList(new Student(first, last, string1P, firstG, string2P, secondG, string3P, thirdG));
 			
+			System.out.println("Your new roster is: ");
+			for(int i = 0; i < RunSIS.StudentList.size(); i++)
+			{
+				System.out.println();
+				System.out.print(i + 1 + ") ");
+				System.out.print(RunSIS.StudentList.get(i).getFirstName() + " " + RunSIS.StudentList.get(i).getLastName() + " " + 
+				RunSIS.StudentList.get(i).getFirstPeriod() + " " + RunSIS.StudentList.get(i).getFirstGrade() + " " + 
+				RunSIS.StudentList.get(i).getSecondPeriod() + " " + RunSIS.StudentList.get(i).getSecondGrade() + " " + 
+				RunSIS.StudentList.get(i).getThirdPeriod() + " " + RunSIS.StudentList.get(i).getThirdGrade());
+			}
 		}
 		
 		public static void deleteStudent() throws IOException
