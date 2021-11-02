@@ -52,6 +52,18 @@ public class RunSIS
 			System.out.println("1) add or delete a student");
 			System.out.println("2) change student grades/schedule");
 			System.out.println("3) sort students");
+
+			int userChoice = userInt.nextInt();
+			if(userChoice == 1) {
+				
+			}
+			if(userChoice == 2) {
+				Grades.gradesMenu();
+			}
+			if(userChoice == 3) {
+				
+			}
+
 			
 			// Scanner for sorting
 			//Scanner userInput = new Scanner(System.in);
