@@ -18,9 +18,8 @@ public class AddDeleteStudent
 		static String secondG;
 		static String thirdG;
 		static String deleteLast;
-		static String string1P;
-		static String string2P;
-		static String string3P;
+
+
 		
 		public static void main(String[] args) throws IOException
 			{
@@ -50,6 +49,9 @@ public class AddDeleteStudent
 		{
 			System.out.println("What is the first name of your new student");
 			first = stringInput.nextLine();
+
+			//set name into array list
+			//RunSIS.Student.setFirstName(first);
 
 			System.out.println("Last Name?");
 			last = stringInput.nextLine();
@@ -173,6 +175,7 @@ public class AddDeleteStudent
 			deleteLast = stringInput.nextLine();
 			
 			for(int i = 0; i < RunSIS.StudentList.size(); i++)
+
 				{
 					if(deleteLast.equals(RunSIS.StudentList.get(i).getLastName()))
 						{
@@ -190,6 +193,7 @@ public class AddDeleteStudent
 					RunSIS.StudentList.get(i).getSecondPeriod() + " " + RunSIS.StudentList.get(i).getSecondGrade() + " " + 
 					RunSIS.StudentList.get(i).getThirdPeriod() + " " + RunSIS.StudentList.get(i).getThirdGrade());
 				}
+
 			System.out.println("\n");
 			System.out.println("This is your new roster ^^");
 		}
