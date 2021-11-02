@@ -43,6 +43,7 @@ public class RunSIS
 //				
 //			}
 
+
 		}
 		public static void displaySortingMenu()
 		{
@@ -63,6 +64,7 @@ public class RunSIS
 			if(userChoice == 3) {
 				
 			}
+
 
 			
 			// Scanner for sorting

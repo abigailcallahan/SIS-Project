@@ -18,6 +18,8 @@ public class AddDeleteStudent
 		static String secondG;
 		static String thirdG;
 		static String deleteLast;
+
+
 		
 		public static void main(String[] args) throws IOException
 			{
@@ -47,22 +49,22 @@ public class AddDeleteStudent
 		{
 			System.out.println("What is the first name of your new student");
 			first = stringInput.nextLine();
+
 			//set name into array list
 			//RunSIS.Student.setFirstName(first);
+
 			System.out.println("Last Name?");
 			last = stringInput.nextLine();
-			//last name into arraylist
-//			new Student = (first, setLastName(last), 0, 0, 0, 0, 0, 0);
+			
+			
 			System.out.println();
-			
-			
 			System.out.println("What is " + first + " " + last + "'s first period class? Your options are: ");
 			System.out.println("\t1) Biology\n\t2) English\n\t3) Algebra");
-			firstP = intInput.nextInt();
+			firstP = intInput.nextInt(); 
 			
 			if(firstP == 1)
 				{
-					//fill array
+					string1P = "Biology";
 					
 					System.out.println("What is their grade in Biology?");
 					System.out.println("\tuse a capitalized letter with a + or - or nothing");
@@ -74,14 +76,14 @@ public class AddDeleteStudent
 					secondP = intInput.nextInt();
 					if(secondP == 1)
 						{
-							//set 1 to class
-							//use setter 
-							//fill array
+							string2P = "English";
+							
 							System.out.println("What is their grade in English?");
 							System.out.println("\tuse a capitalized letter with a + or - or nothing");
 							secondG = stringInput.nextLine();
-							//fill array with grade
-							//fill array with automatic third period
+							
+							string2P = "Algebra";
+							
 							System.out.println("What is their grade in Algebra?");
 							System.out.println("\tuse a capitalized letter with a + or - or nothing");
 							thirdG = stringInput.nextLine();
@@ -89,24 +91,27 @@ public class AddDeleteStudent
 						}
 					else if(secondP == 2)
 						{
-							//set 2 to class
-							//fill array
+							string2P = "Algebra";
+							
 							System.out.println("What is their grade in Algebra?");
 							System.out.println("\tuse a capitalized letter with a + or - or nothing");
 							secondG = stringInput.nextLine();
-							//fill array with grade
-							//fill array with automatic third period
+							
+							string3P = "English";
+							
 							System.out.println("What is their grade in English?");
 							System.out.println("\tuse a capitalized letter with a + or - or nothing");
 							thirdG = stringInput.nextLine();
 							//display all classes
 						}
+					//RunSIS.StudentList(new Student(first, last, string1P, firstG, string2P, secondG, string3P, thirdG));
 					
 				}
 
 			else if(firstP == 2)
 				{
-					//fill array
+					string2P = "English";
+					
 					System.out.println("What about second period?");
 					System.out.println("\t1) Biology\n\t2) Algebra");
 					secondP = intInput.nextInt();
@@ -126,7 +131,8 @@ public class AddDeleteStudent
 			
 			else if(firstP == 3)
 				{
-					//fill array
+					string3P = "Algebra";
+					
 					System.out.println("What about second period?");
 					System.out.println("\t1) Biology\n\t2) English");
 					secondP = intInput.nextInt();
@@ -169,6 +175,7 @@ public class AddDeleteStudent
 			deleteLast = stringInput.nextLine();
 			
 			for(int i = 0; i < RunSIS.StudentList.size(); i++)
+
 				{
 					if(deleteLast.equals(RunSIS.StudentList.get(i).getLastName()))
 						{
@@ -186,6 +193,7 @@ public class AddDeleteStudent
 					RunSIS.StudentList.get(i).getSecondPeriod() + " " + RunSIS.StudentList.get(i).getSecondGrade() + " " + 
 					RunSIS.StudentList.get(i).getThirdPeriod() + " " + RunSIS.StudentList.get(i).getThirdGrade());
 				}
+
 			System.out.println("\n");
 			System.out.println("This is your new roster ^^");
 		}
