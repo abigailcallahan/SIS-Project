@@ -9,7 +9,7 @@ public class Student
 		private String firstGrade;
 		private String secondGrade;
 		private String thirdGrade;
-		private double GPA;
+		private static String GPA;
 		
 		
 
@@ -104,16 +104,14 @@ public class Student
 			{
 				this.thirdGrade = thirdGrade;
 			}
-		public double getGPA()
+		public static String getGPA(String a, String b, String c)
 			{
+			double average = 0;
+			String[] grades = {a,b,c};
 				return GPA;
 			}
 
-		public void setGPA(double gPA)
-			{
-				GPA = gPA;
-			}
-
+		
 		
 		
 		
