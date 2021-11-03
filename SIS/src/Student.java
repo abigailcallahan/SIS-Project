@@ -118,6 +118,10 @@ public class Student
 				else if(grades[i].equals("B+")) average += 3.33;
 				else if(grades[i].equals("B")) average += 3.;
 				else if(grades[i].equals("B-")) average += 2.67;
+				else if(grades[i].equals("C+")) average += 2.33;
+				else if(grades[i].equals("C+")) average += 2.;
+				else if(grades[i].equals("C-")) average += 1.67;
+				else if(grades[i].equals("D+")) average += 1.33;
 			}
 			double GPA = (average) / 3;
 			DecimalFormat d = new DecimalFormat("0.00");
