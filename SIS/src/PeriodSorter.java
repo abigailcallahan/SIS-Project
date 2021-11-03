@@ -2,13 +2,15 @@ import java.util.Comparator;
 
 public class PeriodSorter implements Comparator<Student>
 	{
+		static int classSortChoice;
+		
 		public int compare (Student s1, Student s2)
 		{
-			if(RunSIS.classSortChoice == 1)
-				return s1.getClassP1().compareTo(s2.getClassP1());
-			else if(RunSIS.classSortChoice == 2)
-				return s1.getClassP2().compareTo(s2.getClassP2());
+			if(classSortChoice == 1)
+				return s1.getFirstPeriod().compareTo(s2.getFirstPeriod());
+			else if(classSortChoice == 2)
+				return s1.getSecondPeriod().compareTo(s2.getSecondPeriod());
 			else 
-				return s1.getClassP3().compareTo(s2.getClassP3());
+				return s1.getThirdPeriod().compareTo(s2.getThirdPeriod());
 		}
 	}

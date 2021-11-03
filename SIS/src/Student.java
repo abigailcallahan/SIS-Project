@@ -1,4 +1,6 @@
+
 import java.text.DecimalFormat;
+
 
 public class Student
 	{
@@ -14,7 +16,7 @@ public class Student
 		
 		
 
-		public Student(String f, String l, String fp, String sp, String tp, String fg, String sg, String tg)
+		public Student(String f, String l, String fp, String fg, String sp, String sg, String tp, String tg)
 		{
 			firstName = f;
 			lastName = l;
@@ -105,6 +107,7 @@ public class Student
 			{
 				this.thirdGrade = thirdGrade;
 			}
+
 		public static String getGPA(String a, String b, String c)
 			{
 			double average = 0;
