@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 
 public class Student
 	{
@@ -108,7 +109,16 @@ public class Student
 			{
 			double average = 0;
 			String[] grades = {a,b,c};
-				return GPA;
+			for (int i = 0; i < grades.length; i++) {
+				if (grades[i].equals("A+")||grades.equals("A")) average += 4.;
+				else if(grades[i].equals("A-")) average += 3.67;
+				else if(grades[i].equals("B+")) average += 3.33;
+			}
+			double GPA = (average) / 3;
+			DecimalFormat d = new DecimalFormat("0.00");
+			return d.format(GPA);
+			
+				
 			}
 
 		
