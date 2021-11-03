@@ -1,4 +1,6 @@
-import java.util.Scanner;
+
+import java.text.DecimalFormat;
+
 
 public class Student
 	{
@@ -10,7 +12,7 @@ public class Student
 		private String firstGrade;
 		private String secondGrade;
 		private String thirdGrade;
-		private double GPA;
+		private static String GPA;
 		
 		
 
@@ -105,16 +107,34 @@ public class Student
 			{
 				this.thirdGrade = thirdGrade;
 			}
-		public static  getGPA()
+
+		public static String getGPA(String a, String b, String c)
 			{
-			String  grade = "";
-			String[] letters
-				return GPA;
+			double average = 0;
+			String[] grades = {a,b,c};
+			for (int i = 0; i < grades.length; i++) {
+				if (grades[i].equals("A+")||grades.equals("A")) average += 4.;
+				else if(grades[i].equals("A-")) average += 3.67;
+				else if(grades[i].equals("B+")) average += 3.33;
+				else if(grades[i].equals("B")) average += 3.;
+				else if(grades[i].equals("B-")) average += 2.67;
+				else if(grades[i].equals("C+")) average += 2.33;
+				else if(grades[i].equals("C")) average += 2.;
+				else if(grades[i].equals("C-")) average += 1.67;
+				else if(grades[i].equals("D+")) average += 1.33;
+				else if(grades[i].equals("D")) average += 1.;
+				else if(grades[i].equals("D-")) average += .67;
+				
+			}
+			double GPA = (average) / 3;
+			DecimalFormat d = new DecimalFormat("0.00");
+			return d.format(GPA);
+			
 				
 			}
 
-		
 
+		
 		
 		
 		
