@@ -45,7 +45,7 @@ public class RunSIS
 
 
 		}
-		public static void displaySortingMenu()
+		public static void displaySortingMenu() throws IOException
 		{
 			//printing out main menu
 			Scanner userInt = new Scanner(System.in);
