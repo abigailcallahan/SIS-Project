@@ -1,19 +1,39 @@
 import java.util.*;
 public class Classes
 	{
-		private static Scanner stringGetter = new Scanner(System.in);
-		private static int studentIndex = Grades.studentIndexGetter();
-		public static void classChanger() {
-			System.out.println("Their classes are:");
-			System.out.println("P1 "+RunSIS.StudentList.get(studentIndex).getFirstPeriod());
-			System.out.println("P2 "+RunSIS.StudentList.get(studentIndex).getFirstPeriod());
-			System.out.println("P3 "+RunSIS.StudentList.get(studentIndex).getFirstPeriod());
-			System.out.println("\nDo you want to change them?\nyes or no");
-			if(stringGetter.nextLine().equalsIgnoreCase("yes")) {
-				System.out.println("What do you want to be their new first period class?");
-				if(stringGetter.nextLine().equalsIgnoreCase("Algebra")) {
-					RunSIS.StudentList.get(studentIndex).setFirstPeriod("Algebra");
+		private static ArrayList<Student> periodOneAlgebra = new ArrayList<Student>();
+		private static ArrayList<Student> periodTwoAlgebra = new ArrayList<Student>();
+		private static ArrayList<Student> periodThreeAlgebra = new ArrayList<Student>();
+		private static ArrayList<Student> periodOneBiology = new ArrayList<Student>();
+		private static ArrayList<Student> periodTwoBiology = new ArrayList<Student>();
+		private static ArrayList<Student> periodThreeBiology = new ArrayList<Student>();
+		private static ArrayList<Student> periodOneEnglish = new ArrayList<Student>();
+		private static ArrayList<Student> periodTwoEnglish = new ArrayList<Student>();
+		private static ArrayList<Student> periodThreeEnglish= new ArrayList<Student>();
+		public static void fillAuxLists() {
+			for(int i = 0; i<RunSIS.StudentList.size();i++) {
+				if(RunSIS.StudentList.get(i).getFirstPeriod().equals("Algebra")) {
+					periodOneAlgebra.add(RunSIS.StudentList.get(i));
+				}else if (RunSIS.StudentList.get(i).getFirstPeriod().equals("Biology")) {
+					periodOneBiology.add(RunSIS.StudentList.get(i));
+				}else {
+					periodOneEnglish.add(RunSIS.StudentList.get(i));
+				}
+				if(RunSIS.StudentList.get(i).getSecondPeriod().equals("Algebra")) {
+					periodTwoAlgebra.add(RunSIS.StudentList.get(i));
+				}else if(RunSIS.StudentList.get(i).getSecondPeriod().equals("Biology")) {
+					periodTwoBiology.add(RunSIS.StudentList.get(i));
+				}else {
+					periodTwoEnglish.add(RunSIS.StudentList.get(i));
+				}
+				if(RunSIS.StudentList.get(i).getThirdPeriod().equals("Algebra")) {
+					periodThreeAlgebra.add(RunSIS.StudentList.get(i));
+				}else if(RunSIS.StudentList.get(i).getThirdPeriod().equals("Biology")) {
+					periodThreeBiology.add(RunSIS.StudentList.get(i));
+				}else {
+					periodThreeEnglish.add(RunSIS.StudentList.get(i));
 				}
 			}
 		}
+		
 	}

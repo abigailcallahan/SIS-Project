@@ -17,6 +17,11 @@ public class Grades
 		private static String tempClassStorage;
 		private static int optionChoice;
 		private static String classChoice;
+		private static boolean oneNotUsed = true;
+		private static boolean twoNotUsed = true;
+		private static boolean threeNotUsed = true;
+		private static int one;
+		private static int two;
 
 		public static void gradesMenu()
 			{
@@ -61,6 +66,9 @@ public class Grades
 
 		public static void changeClasses()
 			{
+				threeNotUsed = true;
+				twoNotUsed = true;
+				oneNotUsed = true;
 				sIndex = studentIndexGetter();
 				System.out.println("Do you want so switch (2) two classes or (3) change all three?");
 				classSizeChoice = intGetter.nextInt();
@@ -72,63 +80,62 @@ public class Grades
 						System.out.println("What do you want the first period class to be?");
 						classSelections(1);
 						classSetter(1, classChoice, sIndex);
+						System.out.println("What do you want the second period class to be?");
+						classSelections(1);
+						classSetter(2, classChoice, sIndex);
+						classSelections(0);
+						classSetter(3, classChoice, sIndex);
 					}
 			}
 
 		private static void classSelections(int s)
 			{
-				boolean oneNotUsed = true;
-				boolean twoNotUsed = true;
-				boolean threeNotUsed = true;
 				if (s == 1)
 					{
-						for (int i = 0; i < 3; i++)
+						int i = 1;
+
+						System.out.println();
+						if (oneNotUsed)
 							{
-								if (oneNotUsed && i == 1)
-									{
-
-										System.out.print(i + ") Algebra");
-										classChoice = "Algebra";
-									} else if (twoNotUsed && i == 2)
-									{
-
-										System.out.print(i + ") English");
-										classChoice = "English";
-									} else if (threeNotUsed && i == 3)
-									{
-
-										System.out.print(i + ") Biology");
-										classChoice = "Biology";
-									}
-								if (i == 0 || i == 1)
-									{
-										System.out.println(" or ");
-									}
+								one = i;
+								System.out.print(i + ") Algebra");
+								i++;
 							}
-					}else /*if (s==2)*/ {
-						int i = 0;
-								if (oneNotUsed && i == 1)
-									{
-										System.out.print(i + ") Algebra");
-										classChoice = "Algebra";
-										i++;
-									}  if (twoNotUsed && i == 2)
-									{
-										System.out.print(i + ") English");
-										classChoice = "English";
-										i++;
-									}  if (threeNotUsed && i == 3)
-									{
-										System.out.print(i + ") Biology");
-										classChoice = "Biology";
-										i++;
-									}
-								if (i == 0 || i == 1)
-									{
-										System.out.println(" or ");
-									}
-						
+						if (twoNotUsed)
+							{
+								two = i;
+								System.out.print(i + ") English");
+								i++;
+							}
+						if (threeNotUsed)
+							{
+
+								System.out.print(i + ") Biology");
+
+							}
+						int cChoice = intGetter.nextInt();
+						if (cChoice == one)
+							{
+								oneNotUsed = false;
+								classChoice = "Algebra";
+							} else if (cChoice == two)
+							{
+								twoNotUsed = false;
+								classChoice = "English";
+							} else
+							{
+								threeNotUsed = false;
+								classChoice = "Biology";
+							}
+					}else {
+						if (oneNotUsed) {
+							classChoice = "Algebra";
+						}else if (twoNotUsed) {
+						classChoice = "English";
+					}else if (threeNotUsed) {
+						classChoice = "Biology";
 					}
+						}
 			}
 
 		private static void changeTwoClasses(int sI)
