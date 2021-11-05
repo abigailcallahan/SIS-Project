@@ -25,7 +25,7 @@ public class AddDeleteStudent
 
 
 		
-		public static void main(String[] args) throws IOException
+		public static void addDeleteStudent() throws IOException
 			{
 				RunSIS.fillArrayList();
 				System.out.println("Would you like to: ");
@@ -46,7 +46,8 @@ public class AddDeleteStudent
 				
 				else if(answer == 3)
 					{
-						//go to menu
+						
+						RunSIS.displaySortingMenu();
 					}
 			}
 		
