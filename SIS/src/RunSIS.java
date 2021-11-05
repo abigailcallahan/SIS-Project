@@ -14,8 +14,9 @@ public class RunSIS
 	
 		public static void main(String[] args) throws IOException
 			{
-
-			fillArrayList();
+				fillArrayList();
+			
+			
 			}
 		public static void fillArrayList() throws IOException
 		{

@@ -128,6 +128,7 @@ public class Student
 			}
 			double GPA = average / 3;
 			DecimalFormat d = new DecimalFormat("0.00");
+			
 			double rounded = ((int) (GPA * 100.0))/100.0;
 			return(rounded);
 				
