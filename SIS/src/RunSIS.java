@@ -9,7 +9,7 @@ public class RunSIS
 	//arraylist and variables
 	//static ArrayList<Student>StudentList = new ArrayList<Student>();
 	static String student;
-
+	// hello 
 	static ArrayList<Student> StudentList = new ArrayList<Student>();
 	
 		public static void main(String[] args) throws IOException
