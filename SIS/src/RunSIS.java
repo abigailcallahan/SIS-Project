@@ -56,7 +56,7 @@ public class RunSIS
 
 			int userChoice = userInt.nextInt();
 			if(userChoice == 1) {
-				
+				AddDeleteStudent.addDeleteStudent();
 			}
 			if(userChoice == 2) {
 				Grades.gradesMenu();
