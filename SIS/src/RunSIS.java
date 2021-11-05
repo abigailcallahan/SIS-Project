@@ -14,7 +14,7 @@ public class RunSIS
 	
 		public static void main(String[] args) throws IOException
 			{
-
+			displaySortingMenu();
 			fillArrayList();
 			}
 		public static void fillArrayList() throws IOException
