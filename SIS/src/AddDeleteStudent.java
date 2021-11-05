@@ -46,7 +46,8 @@ public class AddDeleteStudent
 				
 				else if(answer == 3)
 					{
-						//go to menu
+						
+						RunSIS.displaySortingMenu();
 					}
 			}
 		
