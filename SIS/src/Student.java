@@ -108,10 +108,10 @@ public class Student
 				this.thirdGrade = thirdGrade;
 			}
 
-		public static String getGPA(String a, String b, String c)
+		public double getGPA()
 			{
 			double average = 0;
-			String[] grades = {a,b,c};
+			String[] grades = {firstGrade,secondGrade,thirdGrade};
 			for (int i = 0; i < grades.length; i++) {
 				if (grades[i].equals("A+")||grades.equals("A")) average += 4.;
 				else if(grades[i].equals("A-")) average += 3.67;
@@ -126,10 +126,10 @@ public class Student
 				else if(grades[i].equals("D-")) average += .67;
 				
 			}
-			double GPA = (average) / 3;
+			double GPA = average / 3;
 			DecimalFormat d = new DecimalFormat("0.00");
-			return d.format(GPA);
-			
+			double rounded = ((int) (GPA * 100.0))/100.0;
+			return(rounded);
 				
 			}
 
