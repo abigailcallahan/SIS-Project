@@ -19,6 +19,10 @@ public class AddDeleteStudent
 		static String thirdG;
 		static String deleteLast;
 
+		static String string1P;
+		static String string2P;
+		static String string3P;
+
 
 		
 		public static void main(String[] args) throws IOException
@@ -181,7 +185,7 @@ public class AddDeleteStudent
 				{
 					System.out.println("You did not enter a valid answer, you will restart.");
 				}
-			RunSIS.StudentList(new Student(first, last, string1P, firstG, string2P, secondG, string3P, thirdG));
+			RunSIS.StudentList.add(new Student(first, last, string1P, firstG, string2P, secondG, string3P, thirdG));
 			
 			System.out.println("Your new roster is: ");
 			for(int i = 0; i < RunSIS.StudentList.size(); i++)
@@ -207,7 +211,7 @@ public class AddDeleteStudent
 					RunSIS.StudentList.get(i).getSecondPeriod() + " " + RunSIS.StudentList.get(i).getSecondGrade() + " " + 
 					RunSIS.StudentList.get(i).getThirdPeriod() + " " + RunSIS.StudentList.get(i).getThirdGrade());
 				}
-			
+			                                                                                                                                                                                                                                                                            
 			System.out.println("\n\n");
 			System.out.println("What is the last name of the student you would like to delete?");
 			deleteLast = stringInput.nextLine();
@@ -235,24 +239,6 @@ public class AddDeleteStudent
 			System.out.println("\n");
 			System.out.println("This is your new roster ^^");
 		}
-	
-	
-	
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		
 	}
