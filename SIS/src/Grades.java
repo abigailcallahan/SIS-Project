@@ -149,7 +149,7 @@ public class Grades
 
 				System.out.println("What period is the first class that you want to switch?");
 				classOneChoice = intGetter.nextInt();
-				System.out.println("Which is the second class that you want to switch?");
+				System.out.println("Which period is the second class that you want to switch?");
 				classTwoChoice = intGetter.nextInt();
 				tempClassStorage = classGetter(classOneChoice, sI);
 				classSetter(classOneChoice, classGetter(classTwoChoice, sI), sI);
