@@ -52,50 +52,52 @@ public class RunSIS
 
 		public static void displaySortingMenu() throws IOException
 			{
-				while(true) {
-				// printing out main menu
-				Scanner userInt = new Scanner(System.in);
-				System.out.println("What would you like to do?");
-				System.out.println("1) add or delete a student");
-				System.out.println("2) change student grades/schedule");
-				System.out.println("3) sort students");
-				System.out.println("4) print a class");
-				System.out.println("5) exit");
-				int userChoice = userInt.nextInt();
-				if (userChoice == 1)
+				while (true)
 					{
-						AddDeleteStudent.addDeleteStudent();
-					} else if (userChoice == 2)
-					{
-						Grades.gradesMenu();
-					} else if (userChoice == 3)
-					{
-						// Scanner for sorting
-						Scanner userInput = new Scanner(System.in);
-						// variable for scanner
-						int menuChoice = userInput.nextInt();
+						// printing out main menu
+						Scanner userInt = new Scanner(System.in);
+						System.out.println("What would you like to do?");
+						System.out.println("1) add or delete a student");
+						System.out.println("2) change student grades/schedule");
+						System.out.println("3) sort students");
+						System.out.println("4) print a class");
+						System.out.println("5) exit");
+						int userChoice = userInt.nextInt();
+						if (userChoice == 1)
+							{
+								AddDeleteStudent.addDeleteStudent();
+							} else if (userChoice == 2)
+							{
+								Grades.gradesMenu();
+							} else if (userChoice == 3)
+							{
+								// Scanner for sorting
+								Scanner userInput = new Scanner(System.in);
+								// variable for scanner
+								int menuChoice = userInput.nextInt();
 
-						// if statement to cycle through sorting menu
-						if (menuChoice == 1)
-							{
-								Collections.sort(StudentList, new LastNameSorter());
-							} else if (menuChoice == 2)
-							{
-								Collections.sort(StudentList, new GPASorter());
-							} else if (menuChoice == 3)
-							{
+								// if statement to cycle through sorting menu
+								if (menuChoice == 1)
+									{
+										Collections.sort(StudentList, new LastNameSorter());
+									} else if (menuChoice == 2)
+									{
+										Collections.sort(StudentList, new GPASorter());
+									} else if (menuChoice == 3)
+									{
 
-							} else
+									} else
+									{
+										AddDeleteStudent.addStudent();
+									}
+							} else if (userChoice == 4)
 							{
-								AddDeleteStudent.addStudent();
+								Classes.printAClass();
+							} else if (userChoice == 5)
+							{
+								System.exit(0);
 							}
-					}else if (userChoice ==4) {
-						Classes.printAClass();
-					} else if (userChoice ==5)
-					{
-						System.exit(0);
 					}
-				}
 			}
 
 		public static void displayPeriodSorter()
