@@ -69,7 +69,14 @@ public class Classes
 				displayClassChoice = intGetter.nextInt();
 				System.out.println("What is the type of class you want displayed?\n1) Algebra\n2) Biology\n3) English");
 				classType = intGetter.nextInt();
-				printList(classListGetter(displayClassChoice, classType));
+				if(classType ==1) {
+				System.out.println("This class is Period "+displayClassChoice+" Algebra");
+				}else if (classType==2) {
+					System.out.println("This class is Period "+displayClassChoice+" Biology");
+				}else {
+					System.out.println("This class is Period "+displayClassChoice+" English");
+				}
+				jonathansListPrinter(classListGetter(displayClassChoice, classType));
 
 			}
 
@@ -134,4 +141,9 @@ public class Classes
 						System.out.println(s.getLastName() + ", " + s.getFirstName() + ", " + s.getGPA() + ", " + s.getFirstPeriod() + ", " + s.getSecondPeriod() + ", " + s.getThirdPeriod());
 					}
 			}
+		private static void jonathansListPrinter(ArrayList<Student> sl) {
+			for(Student s :sl) {
+				System.out.println(s.getLastName()+", "+ s.getFirstName());
+			}
+		}
 	}

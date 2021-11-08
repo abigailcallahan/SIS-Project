@@ -40,7 +40,8 @@ public class RunSIS
 //to get 10 pull requests
 		public static void displaySortingMenu() throws IOException
 			{
-						// printing out main menu
+				while (true) {		
+				// printing out main menu
 						Scanner userInt = new Scanner(System.in);
 						System.out.println("\n\nWhat would you like to do?");
 						System.out.println("1) add or delete a student");
@@ -106,7 +107,7 @@ public class RunSIS
 								// will end the program
 								System.exit(0);
 							}
-					
+				}
 			}
 
 		public static void displayPeriodSorter()
