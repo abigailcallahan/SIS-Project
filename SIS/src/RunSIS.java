@@ -112,6 +112,7 @@ public class RunSIS
 		public static void displayPeriodSorter()
 			{
 				// printing out period menu
+				// newest comments
 				System.out.println("Which period would you like to see?");
 				System.out.println("1)  period 1");
 				System.out.println("2)  period 2");
