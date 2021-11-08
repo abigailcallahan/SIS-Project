@@ -41,7 +41,7 @@ public class RunSIS
 					{
 						// printing out main menu
 						Scanner userInt = new Scanner(System.in);
-						System.out.println("What would you like to do?");
+						System.out.println("\n\nWhat would you like to do?");
 						System.out.println("1) add or delete a student");
 						System.out.println("2) change student grades/schedule");
 						System.out.println("3) sort students");
@@ -80,11 +80,13 @@ public class RunSIS
 									{
 										AddDeleteStudent.addStudent();
 									}
-							} else if (userChoice == 4)
+							}
+						else if (userChoice == 4)
 							{
 								// great for printing
 								Classes.printAClass();
-							} else if (userChoice == 5)
+							} 
+						else if (userChoice == 5)
 							{
 								// will end the program
 								System.exit(0);
