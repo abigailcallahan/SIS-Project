@@ -102,19 +102,19 @@ public class Grades
 						if (oneNotUsed)
 							{
 								one = i;
-								System.out.print(i + ") Algebra");
+								System.out.print(i + ") Algebra ");
 								i++;
 							}
 						if (twoNotUsed)
 							{
 								two = i;
-								System.out.print(i + ") English");
+								System.out.print(i + ") English ");
 								i++;
 							}
 						if (threeNotUsed)
 							{
 
-								System.out.print(i + ") Biology");
+								System.out.print(i + ") Biology ");
 
 							}
 						int cChoice = intGetter.nextInt();
