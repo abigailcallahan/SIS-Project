@@ -127,15 +127,19 @@ public class Grades
 								threeNotUsed = false;
 								classChoice = "Biology";
 							}
-					}else {
-						if (oneNotUsed) {
-							classChoice = "Algebra";
-						}else if (twoNotUsed) {
-						classChoice = "English";
-					}else if (threeNotUsed) {
-						classChoice = "Biology";
+					} else
+					{
+						if (oneNotUsed)
+							{
+								classChoice = "Algebra";
+							} else if (twoNotUsed)
+							{
+								classChoice = "English";
+							} else if (threeNotUsed)
+							{
+								classChoice = "Biology";
+							}
 					}
-						}
 			}
 
 		private static void changeTwoClasses(int sI)
@@ -147,9 +151,9 @@ public class Grades
 				System.out.println(
 						RunSIS.StudentList.get(sI).getFirstName() + "'s third period class is " + classGetter(3, sI));
 
-				System.out.println("What period is the first class that you want to switch?");
+				System.out.println("What period number is the first class that you want to switch?");
 				classOneChoice = intGetter.nextInt();
-				System.out.println("Which is the second class that you want to switch?");
+				System.out.println("What period number is the second class that you want to switch?");
 				classTwoChoice = intGetter.nextInt();
 				tempClassStorage = classGetter(classOneChoice, sI);
 				classSetter(classOneChoice, classGetter(classTwoChoice, sI), sI);
