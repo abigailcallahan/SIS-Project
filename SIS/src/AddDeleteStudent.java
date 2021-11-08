@@ -180,7 +180,7 @@ public class AddDeleteStudent
 					
 					string3P = "Biology";
 					System.out.println("What is their grade in Biology?");
-					System.out.println("\tuse a capitalized letter with a + or - or nothing");
+					System.out.println("\tuse a capitalized letter with a + or - or nothing ");
 					thirdG = stringInput.nextLine();
 					}
 				}
