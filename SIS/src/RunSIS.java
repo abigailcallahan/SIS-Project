@@ -7,11 +7,10 @@ import java.util.Comparator;
 
 public class RunSIS
 	{
-		// arraylist and variables
-		// static ArrayList<Student>StudentList = new ArrayList<Student>();
+		// variables
 		static String student;
 		static int menuChoice;
-		// hello
+		// Array list
 		static ArrayList<Student> StudentList = new ArrayList<Student>();
 
 		public static void main(String[] args) throws IOException
@@ -25,7 +24,7 @@ public class RunSIS
 
 		public static void fillArrayList() throws IOException
 			{
-				// filling arraylist
+				// filling array list
 				Scanner myFile = new Scanner(new File("StudentList.txt"));
 				while (myFile.hasNext())
 					{
@@ -34,31 +33,10 @@ public class RunSIS
 						StudentList.add(new Student(filler[0], filler[1], filler[2], filler[3], filler[4], filler[5],
 								filler[6], filler[7]));
 					}
-				// printing out main menu
-//			Scanner userInt = new Scanner(System.in);
-//			System.out.println("What would you like to do?");
-//			System.out.println("1) add or delete a student");
-//			System.out.println("2) change student grades/schedule");
-//			System.out.println("3) sort students");
-//			int userChoice = userInt.nextInt();
-//			if(userChoice == 1) {
-//
-//			}
-//			if(userChoice == 2) {
-//				
-//			}
-//			if(userChoice == 3) {
-//				
-//			}
-
 			}
 
 		public static void displaySortingMenu() throws IOException
 			{
-				// while loop to prevent stoppage
-	
-				//while (true)
-					//{
 						// printing out main menu
 						Scanner userInt = new Scanner(System.in);
 						System.out.println("What would you like to do?");
@@ -87,7 +65,7 @@ public class RunSIS
 										Classes.printList(StudentList);
 										for(int i = 0; StudentList.size() > i; i++)
 											{
-												//System.out.println(StudentList.get(i));
+												
 											}
 									} else if (nextUserChoice == 2)
 									{
@@ -112,7 +90,7 @@ public class RunSIS
 								// will end the program
 								System.exit(0);
 							}
-					//}
+					
 			}
 
 		public static void displayPeriodSorter()
@@ -128,7 +106,6 @@ public class RunSIS
 				// variable for scanner
 				PeriodSorter.classSortChoice = userInput.nextInt();
 
-				// Collections.sort(Database.roster, new NameSorter());
 			}
 		public static void mainMenuSorter()
 		{
@@ -137,6 +114,5 @@ public class RunSIS
 			System.out.println("1) By Last name");
 			System.out.println("2) By GPA");
 			System.out.println("3) By Period");
-			//System.out.println();
 		}
 	}
