@@ -30,9 +30,11 @@ public class Grades
 				if (optionChoice == 1)
 					{
 						changeClasses();
-					} else
+					} else if (optionChoice==2)
 					{
 						changeGrade();
+					}else {
+						TheGame.mainGame();
 					}
 			}
 
@@ -217,6 +219,6 @@ public class Grades
 						System.out.println(RunSIS.StudentList.get(sIndex).getFirstName() + " now has a "
 								+ RunSIS.StudentList.get(sIndex).getThirdGrade() + " in " + classGetter(3, sIndex));
 					}
-				// It needs an update GPA method to be called here
+				System.out.println(RunSIS.StudentList.get(sIndex).getFirstName() +" has a GPA of "+RunSIS.StudentList.get(sIndex).getGPA());
 			}
 	}
