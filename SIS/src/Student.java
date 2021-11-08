@@ -113,7 +113,7 @@ public class Student
 			double average = 0;
 			String[] grades = {firstGrade,secondGrade,thirdGrade};
 			for (int i = 0; i < grades.length; i++) {
-				if (grades[i].equals("A+")||grades.equals("A")) average += 4.;
+				if (grades[i].equals("A+")||grades[i].equals("A")) average += 4.;
 				else if(grades[i].equals("A-")) average += 3.67;
 				else if(grades[i].equals("B+")) average += 3.33;
 				else if(grades[i].equals("B")) average += 3.;
