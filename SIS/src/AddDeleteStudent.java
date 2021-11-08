@@ -22,11 +22,8 @@ public class AddDeleteStudent
 		static String string1P;
 		static String string2P;
 		static String string3P;
-		
 		static String enter;
 
-
-		
 		public static void addDeleteStudent() throws IOException
 			{
 				
@@ -43,7 +40,6 @@ public class AddDeleteStudent
 				else if(answer == 2)
 					{
 						deleteStudent();
-						
 					}
 				
 				else if(answer == 3)
