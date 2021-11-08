@@ -3,12 +3,14 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class RunSIS
 	{
 		// arraylist and variables
 		// static ArrayList<Student>StudentList = new ArrayList<Student>();
 		static String student;
+
 		static ArrayList<Student> StudentList = new ArrayList<Student>();
 
 		public static void main(String[] args) throws IOException
@@ -16,6 +18,7 @@ public class RunSIS
 
 				fillArrayList();
 				displaySortingMenu();
+				
 
 			}
 
@@ -37,8 +40,8 @@ public class RunSIS
 			{
 				// while loop to prevent stoppage
 	
-				while (true)
-					{
+				//while (true)
+					//{
 						// printing out main menu
 						Scanner userInt = new Scanner(System.in);
 						System.out.println("\n\nWhat would you like to do?");
@@ -53,33 +56,42 @@ public class RunSIS
 							{
 								AddDeleteStudent.addDeleteStudent();
 							} 
+
 						else if (userChoice == 2)
 							{
 								Grades.gradesMenu();
 							} 
 						else if (userChoice == 3)
-							{
-								// Scanner for sorting
-								Scanner userInput = new Scanner(System.in);
-								// variable for scanner
-								int menuChoice = userInput.nextInt();
 
+							{
+								mainMenuSorter();
 								// if statement to cycle through sorting menu
-								if (menuChoice == 1)
+								int nextUserChoice = userInt.nextInt();
+								if (nextUserChoice == 1)
 									{
 										Collections.sort(StudentList, new LastNameSorter());
-									} 
-								else if (menuChoice == 2)
-									{
-										Collections.sort(StudentList, new GPASorter());
-									} 
-								else if (menuChoice == 3)
-									{
 
-									} 
-								else
+										Classes.printList(StudentList);
+										for(int i = 0; StudentList.size() > i; i++)
+											{
+												//System.out.println(StudentList.get(i));
+											}
+									} else if (nextUserChoice == 2)
+
 									{
-										AddDeleteStudent.addStudent();
+										
+										Collections.sort(StudentList, new GPASorter());
+
+										Classes.printList(StudentList);
+									} else if (nextUserChoice == 3)
+									{
+										displayPeriodSorter();
+										Collections.sort(StudentList, new PeriodSorter());
+										Classes.printList(StudentList);
+									} else
+
+									{
+										
 									}
 							}
 						else if (userChoice == 4)
@@ -96,22 +108,31 @@ public class RunSIS
 								// will end the program
 								System.exit(0);
 							}
-					}
+					//}
 			}
 
 		public static void displayPeriodSorter()
 			{
 				// printing out period menu
 				System.out.println("Which period would you like to see?");
-				System.out.println("/t(1)  period 1");
-				System.out.println("/t(1)  period 2");
-				System.out.println("/t(1)  period 3");
+				System.out.println("1)  period 1");
+				System.out.println("2)  period 2");
+				System.out.println("3)  period 3");
 
 				// Scanner for sorting
 				Scanner userInput = new Scanner(System.in);
 				// variable for scanner
-				int menuChoice = userInput.nextInt();
+				PeriodSorter.classSortChoice = userInput.nextInt();
 
 				// Collections.sort(Database.roster, new NameSorter());
 			}
+		public static void mainMenuSorter()
+		{
+			// Print out sorting menu
+			System.out.println("How would like to sort the students?");
+			System.out.println("1) By Last name");
+			System.out.println("2) By GPA");
+			System.out.println("3) By Period");
+			//System.out.println();
+		}
 	}

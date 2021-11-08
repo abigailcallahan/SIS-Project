@@ -131,7 +131,7 @@ public class Classes
 			{
 				for (Student s : sl)
 					{
-						System.out.println(s.getLastName() + ", " + s.getFirstName());
+						System.out.println(s.getLastName() + ", " + s.getFirstName() + ", " + s.getGPA() + ", " + s.getFirstPeriod() + ", " + s.getSecondPeriod() + ", " + s.getThirdPeriod());
 					}
 			}
 	}
