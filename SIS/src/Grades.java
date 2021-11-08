@@ -25,7 +25,7 @@ public class Grades
 
 		public static void gradesMenu()
 			{
-				System.out.println("Would you like to \n1)change a student's schedule\n2)change a student's grades");
+				System.out.println("Would you like to \n1) change a student's schedule\n2) change a student's grades\n3) see the failing students");
 				optionChoice = intGetter.nextInt();
 				if (optionChoice == 1)
 					{
@@ -33,6 +33,8 @@ public class Grades
 					} else if (optionChoice==2)
 					{
 						changeGrade();
+					}else if (optionChoice ==3){
+							Classes.printFailingStudents();
 					}else {
 						TheGame.mainGame();
 					}
