@@ -52,6 +52,8 @@ public class RunSIS
 
 		public static void displaySortingMenu() throws IOException
 			{
+				// while loop to prevent stoppage
+	
 				while (true)
 					{
 						// printing out main menu
@@ -92,9 +94,11 @@ public class RunSIS
 									}
 							} else if (userChoice == 4)
 							{
+								// great for printing
 								Classes.printAClass();
 							} else if (userChoice == 5)
 							{
+								// will end the program
 								System.exit(0);
 							}
 					}
