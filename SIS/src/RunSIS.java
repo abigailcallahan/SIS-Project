@@ -7,9 +7,11 @@ import java.util.Comparator;
 
 public class RunSIS
 	{
-		// arraylist and variables
-		// static ArrayList<Student>StudentList = new ArrayList<Student>();
+		// variables
 		static String student;
+
+		static int menuChoice;
+		// Array list
 
 		static ArrayList<Student> StudentList = new ArrayList<Student>();
 
@@ -24,7 +26,7 @@ public class RunSIS
 
 		public static void fillArrayList() throws IOException
 			{
-				// filling arraylist
+				// filling array list
 				Scanner myFile = new Scanner(new File("StudentList.txt"));
 				while (myFile.hasNext())
 					{
@@ -38,10 +40,6 @@ public class RunSIS
 //to get 10 pull requests
 		public static void displaySortingMenu() throws IOException
 			{
-				// while loop to prevent stoppage
-	
-				//while (true)
-					//{
 						// printing out main menu
 						Scanner userInt = new Scanner(System.in);
 						System.out.println("\n\nWhat would you like to do?");
@@ -74,7 +72,7 @@ public class RunSIS
 										Classes.printList(StudentList);
 										for(int i = 0; StudentList.size() > i; i++)
 											{
-												//System.out.println(StudentList.get(i));
+												
 											}
 									} else if (nextUserChoice == 2)
 
@@ -108,7 +106,7 @@ public class RunSIS
 								// will end the program
 								System.exit(0);
 							}
-					//}
+					
 			}
 
 		public static void displayPeriodSorter()
@@ -124,7 +122,6 @@ public class RunSIS
 				// variable for scanner
 				PeriodSorter.classSortChoice = userInput.nextInt();
 
-				// Collections.sort(Database.roster, new NameSorter());
 			}
 		public static void mainMenuSorter()
 		{
@@ -133,6 +130,5 @@ public class RunSIS
 			System.out.println("1) By Last name");
 			System.out.println("2) By GPA");
 			System.out.println("3) By Period");
-			//System.out.println();
 		}
 	}
