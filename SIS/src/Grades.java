@@ -221,6 +221,6 @@ public class Grades
 						System.out.println(RunSIS.StudentList.get(sIndex).getFirstName() + " now has a "
 								+ RunSIS.StudentList.get(sIndex).getThirdGrade() + " in " + classGetter(3, sIndex));
 					}
-				System.out.println(RunSIS.StudentList.get(sIndex).getFirstName() +" has a GPA of "+RunSIS.StudentList.get(sIndex).getGPA());
+
 			}
 	}
