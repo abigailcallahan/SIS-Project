@@ -10,8 +10,7 @@ public class RunSIS
 		// arraylist and variables
 		// static ArrayList<Student>StudentList = new ArrayList<Student>();
 		static String student;
-		static int menuChoice;
-		// hello
+
 		static ArrayList<Student> StudentList = new ArrayList<Student>();
 
 		public static void main(String[] args) throws IOException
@@ -34,25 +33,9 @@ public class RunSIS
 						StudentList.add(new Student(filler[0], filler[1], filler[2], filler[3], filler[4], filler[5],
 								filler[6], filler[7]));
 					}
-				// printing out main menu
-//			Scanner userInt = new Scanner(System.in);
-//			System.out.println("What would you like to do?");
-//			System.out.println("1) add or delete a student");
-//			System.out.println("2) change student grades/schedule");
-//			System.out.println("3) sort students");
-//			int userChoice = userInt.nextInt();
-//			if(userChoice == 1) {
-//
-//			}
-//			if(userChoice == 2) {
-//				
-//			}
-//			if(userChoice == 3) {
-//				
-//			}
 
 			}
-
+//to get 10 pull requests
 		public static void displaySortingMenu() throws IOException
 			{
 				// while loop to prevent stoppage
@@ -61,22 +44,25 @@ public class RunSIS
 					//{
 						// printing out main menu
 						Scanner userInt = new Scanner(System.in);
-						System.out.println("What would you like to do?");
+						System.out.println("\n\nWhat would you like to do?");
 						System.out.println("1) add or delete a student");
 						System.out.println("2) change student grades/schedule");
 						System.out.println("3) sort students");
 						System.out.println("4) print a class");
-						System.out.println("5) exit");
+						System.out.println("5) play tic tac toe");
+						System.out.println("6) exit");
 						int userChoice = userInt.nextInt();
 						if (userChoice == 1)
 							{
 								AddDeleteStudent.addDeleteStudent();
 							} 
-							else if (userChoice == 2)
+
+						else if (userChoice == 2)
 							{
 								Grades.gradesMenu();
 							} 
-							else if (userChoice == 3)
+						else if (userChoice == 3)
+
 							{
 								mainMenuSorter();
 								// if statement to cycle through sorting menu
@@ -84,15 +70,18 @@ public class RunSIS
 								if (nextUserChoice == 1)
 									{
 										Collections.sort(StudentList, new LastNameSorter());
+
 										Classes.printList(StudentList);
 										for(int i = 0; StudentList.size() > i; i++)
 											{
 												//System.out.println(StudentList.get(i));
 											}
 									} else if (nextUserChoice == 2)
+
 									{
 										
 										Collections.sort(StudentList, new GPASorter());
+
 										Classes.printList(StudentList);
 									} else if (nextUserChoice == 3)
 									{
@@ -100,14 +89,21 @@ public class RunSIS
 										Collections.sort(StudentList, new PeriodSorter());
 										Classes.printList(StudentList);
 									} else
+
 									{
 										
 									}
-							} else if (userChoice == 4)
+							}
+						else if (userChoice == 4)
 							{
 								// great for printing
 								Classes.printAClass();
-							} else if (userChoice == 5)
+							} 
+						else if (userChoice == 5)
+							{
+								TheGame.mainGame();
+							}
+						else if (userChoice == 6)
 							{
 								// will end the program
 								System.exit(0);
