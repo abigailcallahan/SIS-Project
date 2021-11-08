@@ -46,7 +46,8 @@ public class RunSIS
 						System.out.println("2) change student grades/schedule");
 						System.out.println("3) sort students");
 						System.out.println("4) print a class");
-						System.out.println("5) exit");
+						System.out.println("5) play tic tac toe");
+						System.out.println("6) exit");
 						int userChoice = userInt.nextInt();
 						if (userChoice == 1)
 							{
@@ -87,6 +88,10 @@ public class RunSIS
 								Classes.printAClass();
 							} 
 						else if (userChoice == 5)
+							{
+								TheGame.mainGame();
+							}
+						else if (userChoice == 6)
 							{
 								// will end the program
 								System.exit(0);
