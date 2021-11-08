@@ -32,7 +32,7 @@ public class RunSIS
 					}
 
 			}
-
+//for fake
 		public static void displaySortingMenu() throws IOException
 			{
 				// while loop to prevent stoppage
