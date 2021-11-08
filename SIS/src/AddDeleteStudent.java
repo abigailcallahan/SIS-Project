@@ -22,6 +22,8 @@ public class AddDeleteStudent
 		static String string1P;
 		static String string2P;
 		static String string3P;
+		
+		static String enter;
 
 
 		
@@ -188,29 +190,39 @@ public class AddDeleteStudent
 				}
 			RunSIS.StudentList.add(new Student(first, last, string1P, firstG, string2P, secondG, string3P, thirdG));
 			
+			System.out.println("I will now print your new roster: It goes first name, last name, first period class, second period, third period, and each period is followed by their grade. Finally"
+					+ " it displays the GPA ");
+			System.out.println("Press enter to continue: ");
+			enter = stringInput.nextLine();
+			
 			System.out.println("Your new roster is: ");
 			for(int i = 0; i < RunSIS.StudentList.size(); i++)
 			{
 				System.out.println();
 				System.out.print(i + 1 + ") ");
-				System.out.print(RunSIS.StudentList.get(i).getFirstName() + " " + RunSIS.StudentList.get(i).getLastName() + " " + 
-				RunSIS.StudentList.get(i).getFirstPeriod() + " " + RunSIS.StudentList.get(i).getFirstGrade() + " " + 
-				RunSIS.StudentList.get(i).getSecondPeriod() + " " + RunSIS.StudentList.get(i).getSecondGrade() + " " + 
-				RunSIS.StudentList.get(i).getThirdPeriod() + " " + RunSIS.StudentList.get(i).getThirdGrade());
+				System.out.print(RunSIS.StudentList.get(i).getFirstName() + "  " + RunSIS.StudentList.get(i).getLastName() + " - " + 
+				RunSIS.StudentList.get(i).getFirstPeriod() + " - " + RunSIS.StudentList.get(i).getFirstGrade() + " - " + 
+				RunSIS.StudentList.get(i).getSecondPeriod() + " - " + RunSIS.StudentList.get(i).getSecondGrade() + " - " + 
+				RunSIS.StudentList.get(i).getThirdPeriod() + " - " + RunSIS.StudentList.get(i).getThirdGrade() + " - " + RunSIS.StudentList.get(i).getGPA());
 			}
 		}
 		
 		public static void deleteStudent() throws IOException
 		{
 		
+			System.out.println("I will now print your roster: It goes first name, last name, first period class, second period, third period, and each period is followed by their grade. Finally"
+					+ " it displays the GPA ");
+			System.out.println("Press enter to continue: ");
+			enter = stringInput.nextLine();
+			
 			for(int i = 0; i < RunSIS.StudentList.size(); i++)
 				{
 					System.out.println();
 					System.out.print(i + 1 + ") ");
-					System.out.print(RunSIS.StudentList.get(i).getFirstName() + " " + RunSIS.StudentList.get(i).getLastName() + " " + 
-					RunSIS.StudentList.get(i).getFirstPeriod() + " " + RunSIS.StudentList.get(i).getFirstGrade() + " " + 
-					RunSIS.StudentList.get(i).getSecondPeriod() + " " + RunSIS.StudentList.get(i).getSecondGrade() + " " + 
-					RunSIS.StudentList.get(i).getThirdPeriod() + " " + RunSIS.StudentList.get(i).getThirdGrade());
+					System.out.print(RunSIS.StudentList.get(i).getFirstName() + "  " + RunSIS.StudentList.get(i).getLastName() + " - " + 
+					RunSIS.StudentList.get(i).getFirstPeriod() + " - " + RunSIS.StudentList.get(i).getFirstGrade() + " - " + 
+					RunSIS.StudentList.get(i).getSecondPeriod() + " - " + RunSIS.StudentList.get(i).getSecondGrade() + " - " + 
+					RunSIS.StudentList.get(i).getThirdPeriod() + " - " + RunSIS.StudentList.get(i).getThirdGrade() + " - " + RunSIS.StudentList.get(i).getGPA());
 				}
 			                                                                                                                                                                                                                                                                            
 			System.out.println("\n\n");
@@ -227,14 +239,18 @@ public class AddDeleteStudent
 				}
 			
 			//display new roster
+	
+			System.out.println("Press enter to print your new roster ");
+			enter = stringInput.nextLine();
+			
 			for(int i = 0; i < RunSIS.StudentList.size(); i++)
 				{
 					System.out.println();
 					System.out.print(i + 1 + ") ");
-					System.out.print(RunSIS.StudentList.get(i).getFirstName() + " " + RunSIS.StudentList.get(i).getLastName() + " " + 
-					RunSIS.StudentList.get(i).getFirstPeriod() + " " + RunSIS.StudentList.get(i).getFirstGrade() + " " + 
-					RunSIS.StudentList.get(i).getSecondPeriod() + " " + RunSIS.StudentList.get(i).getSecondGrade() + " " + 
-					RunSIS.StudentList.get(i).getThirdPeriod() + " " + RunSIS.StudentList.get(i).getThirdGrade());
+					System.out.print(RunSIS.StudentList.get(i).getFirstName() + " " + RunSIS.StudentList.get(i).getLastName() + " - " + 
+					RunSIS.StudentList.get(i).getFirstPeriod() + " - " + RunSIS.StudentList.get(i).getFirstGrade() + " - " + 
+					RunSIS.StudentList.get(i).getSecondPeriod() + " - " + RunSIS.StudentList.get(i).getSecondGrade() + " - " + 
+					RunSIS.StudentList.get(i).getThirdPeriod() + " - " + RunSIS.StudentList.get(i).getThirdGrade() + " - " + RunSIS.StudentList.get(i).getGPA());
 				}
 
 			System.out.println("\n");
