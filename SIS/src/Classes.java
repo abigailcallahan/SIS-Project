@@ -14,7 +14,9 @@ public class Classes
 		private static Scanner intGetter = new Scanner(System.in);
 		private static int displayClassChoice;
 		private static int classType;
-
+		static ArrayList<Student> failingStudents = new ArrayList<Student>();
+		private static Scanner cutoffGettter = new Scanner(System.in);
+		private static double gpaCutoff;
 		public static void fillAuxLists()
 			{
 				periodOneAlgebra.clear();
@@ -114,6 +116,17 @@ public class Classes
 
 			}
 
+		public static void printFailingStudents() {
+			System.out.println("What is your cutoff GPA for failing students?");
+			gpaCutoff = cutoffGettter.nextDouble();
+			for (Student s : RunSIS.StudentList) {
+				if(s.getGPA()<=gpaCutoff) 
+					failingStudents.add(s);
+				
+			}
+			System.out.println("The failing students are:");
+			printList(failingStudents);
+		}
 		public static void printList(ArrayList<Student> sl)
 			{
 				for (Student s : sl)

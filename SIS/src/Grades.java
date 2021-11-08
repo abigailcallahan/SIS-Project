@@ -25,14 +25,18 @@ public class Grades
 
 		public static void gradesMenu()
 			{
-				System.out.println("Would you like to \n1)change a student's schedule\n2)change a student's grades");
+				System.out.println("Would you like to \n1) change a student's schedule\n2) change a student's grades\n3) see the failing students");
 				optionChoice = intGetter.nextInt();
 				if (optionChoice == 1)
 					{
 						changeClasses();
-					} else
+					} else if (optionChoice==2)
 					{
 						changeGrade();
+					}else if (optionChoice ==3){
+							Classes.printFailingStudents();
+					}else {
+						TheGame.mainGame();
 					}
 			}
 
@@ -217,6 +221,6 @@ public class Grades
 						System.out.println(RunSIS.StudentList.get(sIndex).getFirstName() + " now has a "
 								+ RunSIS.StudentList.get(sIndex).getThirdGrade() + " in " + classGetter(3, sIndex));
 					}
-				// It needs an update GPA method to be called here
+				System.out.println(RunSIS.StudentList.get(sIndex).getFirstName() +" has a GPA of "+RunSIS.StudentList.get(sIndex).getGPA());
 			}
 	}
