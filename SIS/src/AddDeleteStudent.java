@@ -27,7 +27,7 @@ public class AddDeleteStudent
 		
 		public static void addDeleteStudent() throws IOException
 			{
-				RunSIS.fillArrayList();
+				
 				System.out.println("Would you like to: ");
 				System.out.println("1) Add a Student");
 				System.out.println("2) Delete a Student");
@@ -202,7 +202,7 @@ public class AddDeleteStudent
 		
 		public static void deleteStudent() throws IOException
 		{
-			RunSIS.fillArrayList();
+		
 			for(int i = 0; i < RunSIS.StudentList.size(); i++)
 				{
 					System.out.println();
@@ -238,7 +238,7 @@ public class AddDeleteStudent
 				}
 
 			System.out.println("\n");
-			System.out.println("This is your new roster ^^");
+			System.out.println("This is your new roster ^^\n");
 		}
 
 		

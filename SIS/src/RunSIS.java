@@ -9,7 +9,6 @@ public class RunSIS
 		// arraylist and variables
 		// static ArrayList<Student>StudentList = new ArrayList<Student>();
 		static String student;
-		// hello
 		static ArrayList<Student> StudentList = new ArrayList<Student>();
 
 		public static void main(String[] args) throws IOException
@@ -31,22 +30,6 @@ public class RunSIS
 						StudentList.add(new Student(filler[0], filler[1], filler[2], filler[3], filler[4], filler[5],
 								filler[6], filler[7]));
 					}
-				// printing out main menu
-//			Scanner userInt = new Scanner(System.in);
-//			System.out.println("What would you like to do?");
-//			System.out.println("1) add or delete a student");
-//			System.out.println("2) change student grades/schedule");
-//			System.out.println("3) sort students");
-//			int userChoice = userInt.nextInt();
-//			if(userChoice == 1) {
-//
-//			}
-//			if(userChoice == 2) {
-//				
-//			}
-//			if(userChoice == 3) {
-//				
-//			}
 
 			}
 
@@ -68,10 +51,12 @@ public class RunSIS
 						if (userChoice == 1)
 							{
 								AddDeleteStudent.addDeleteStudent();
-							} else if (userChoice == 2)
+							} 
+						else if (userChoice == 2)
 							{
 								Grades.gradesMenu();
-							} else if (userChoice == 3)
+							} 
+						else if (userChoice == 3)
 							{
 								// Scanner for sorting
 								Scanner userInput = new Scanner(System.in);
@@ -82,13 +67,16 @@ public class RunSIS
 								if (menuChoice == 1)
 									{
 										Collections.sort(StudentList, new LastNameSorter());
-									} else if (menuChoice == 2)
+									} 
+								else if (menuChoice == 2)
 									{
 										Collections.sort(StudentList, new GPASorter());
-									} else if (menuChoice == 3)
+									} 
+								else if (menuChoice == 3)
 									{
 
-									} else
+									} 
+								else
 									{
 										AddDeleteStudent.addStudent();
 									}
