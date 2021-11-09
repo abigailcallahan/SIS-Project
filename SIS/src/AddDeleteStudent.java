@@ -52,16 +52,13 @@ public class AddDeleteStudent
 						RunSIS.displaySortingMenu();
 					}
 			}
-		
 		public static void addStudent() throws IOException
 		{
 			System.out.println("What is the first name of your new student");
 			first = stringInput.nextLine();
 
-
 			System.out.println("Last Name?");
 			last = stringInput.nextLine();
-			
 			
 			System.out.println();
 			System.out.println("What is " + first + " " + last + "'s first period class? Your options are: ");
@@ -107,7 +104,7 @@ public class AddDeleteStudent
 							System.out.println("What is their grade in English?");
 							System.out.println("\tuse a capitalized letter with a + or - or nothing");
 							thirdG = stringInput.nextLine();
-							//display all classes
+							
 						}
 					
 					
@@ -240,7 +237,6 @@ public class AddDeleteStudent
 						}
 				}
 			
-			//display new roster
 	
 			System.out.println("Press enter to print your new roster ");
 			enter = stringInput.nextLine();
