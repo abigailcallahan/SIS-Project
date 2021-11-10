@@ -12,7 +12,7 @@ public class TheGame
 		private static String nameII;
 		private static boolean win;
 		private static int turn;
-		private static boolean quiere;
+		private static boolean quiere=true;
 		private static int layerC;
 		private static int colC;
 		private static int shelfC;
@@ -37,7 +37,7 @@ public class TheGame
 			
 		public static void playGame()
 			{
-				do
+				while (quiere)
 					{
 						win = true;
 						move();
@@ -47,8 +47,8 @@ public class TheGame
 						if (quieren == 0)
 							{
 								quiere = false;
-								System.out.println("And I yeet");
-								System.exit(0);
+								
+								
 							}
 						else if (quieren == 1)
 							{
@@ -77,9 +77,9 @@ public class TheGame
 						else
 							{
 								System.out.println("And I yeet");
-								System.exit(0);
+								quiere = false;
 							}
-					} while (quiere);
+					} 
 				;
 			}
 			
@@ -96,8 +96,8 @@ public class TheGame
 				int status = getter.nextInt();
 				if (status == 0)
 					{
-						System.out.println("And I yeet");
-						System.exit(0);
+						
+						quiere = false;
 					}
 				else if (status != 1)
 					{
